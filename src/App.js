@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import ProductList from "./ProductList";
+import CheckOut from "./CheckOut";
+import ProductDetail from "./ProductDetail";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Link to="/">首頁</Link>
+      <Link to="/checkout">購物車</Link>
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="/CheckOut" element={<CheckOut />} />
+
+        <Route path="/ProductDetail" element={<ProductDetail />}>
+          <Route path=":id" element={<ProductDetail />} />
+        </Route>
+        <Route path="*" element="NOT FOUND"/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
