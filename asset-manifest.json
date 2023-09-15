@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/first-spa/static/css/main.e768a5e4.css",
+    "main.js": "/first-spa/static/js/main.1a521613.js",
+    "index.html": "/first-spa/index.html",
+    "main.e768a5e4.css.map": "/first-spa/static/css/main.e768a5e4.css.map",
+    "main.1a521613.js.map": "/first-spa/static/js/main.1a521613.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e768a5e4.css",
+    "static/js/main.1a521613.js"
+  ]
+}
